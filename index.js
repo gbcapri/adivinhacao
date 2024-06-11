@@ -1,8 +1,8 @@
-let aleatorio = Math.floor(Math.random() * 200/* + 1*/);//O mais 1 retira o 0 como opção de acerto
+let aleatorio = Math.floor(Math.random() * 100/* + 1*/);//O mais 1 retira o 0 como opção de acerto
 let num;
 let tentativa = 0;
 
-console.log("adivinhe o numero que foi escolhido entre 0 e 200");
+console.log("adivinhe o numero que foi escolhido entre 0 e 100");
 process.stdin.on("data", function (data) {
   if(tentativa < 15){
     num = Number(data.toString().trim());
@@ -30,5 +30,5 @@ process.stdin.on("data", function (data) {
   console.log("Suas chances acabaram, o número era " + aleatorio);
   console.log("tente novamente o jogo!");
   tentativa = 0;
-  aleatorio = Math.floor(Math.random() * 200);}
+  aleatorio = Math.floor(Math.random() * 100);}
 });
